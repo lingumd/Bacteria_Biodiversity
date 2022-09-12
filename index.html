@@ -5,9 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
   <title>Bellybutton Biodiversity</title>
+  
   <!-- Bootstrap Link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
   <!-- Link to css Style Sheet -->
   <link rel="stylesheet" href="./static/css/style.css">
 </head>
@@ -15,14 +18,23 @@
 <body>
 <!-- Dashboard -->
   <div class="container">
+
     <!-- Nav Bar -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+      <a class="navbar-brand" href="https://github.com/lingumd/Bacteria_Biodiversity">Bacteria Biodiversity Github Repository</a>
+    </nav>
+
     <!-- Jumbotron -->
     <section class="jumbotron_section">
       <div class="row">
         <div class="col-md-12 jumbotron text-center">
           <h1>Belly Button Biodiversity Dashboard</h1>
-          <p>Use the interactive charts below to explore the dataset</p>
+          <p><b>Use the interactive charts below to explore the dataset.</b></p>
         </div>
+        <h4><b>Purpose of Dashboard</b>: Volunteers should be able to identify the top 10 bacterial species in their belly buttons. 
+          If Improbable Beef identifies a species as a candidate to manufacture synthetic beef, 
+          volunteers will be able to identify whether that species is found in their navel.</h4>
+          <hr>
       </div>
     </section>
 
@@ -31,7 +43,7 @@
       <div class="row">
 
         <!-- Pull Down Menu and Metadata -->
-        <div class="col-md-2">
+        <div class="col-md-3">
           <div class="well">
             <h5>Test Subject ID No.:</h5>
             <select id="selDataset" onchange="optionChanged(this.value)"></select>
@@ -43,6 +55,7 @@
               <h3 class="panel-title">Demographic Info</h3>
             </div>
             <div id="sample-metadata" class="panel-body"></div>
+            <div class="panel-footer">Note: WFREQ is displayed in the gauge on the right.</div>
           </div>
         </div>
 
@@ -52,7 +65,7 @@
         </div>
 
         <!-- Gauge Chart -->
-        <div class="col-md-5">
+        <div class="col-md-4">
           <div id="gauge"></div>
         </div>
       </div>

@@ -104,7 +104,9 @@ function buildCharts(sample) {
     ];
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: `Top 10 Bacterial Species Found in Sample ${sample}`
+      title: `Top 10 Bacterial Species Found in Sample ${sample}`,
+      xaxis: {title: "Bacteria Count"},
+      yaxis: {title: "OTU ID"}
      
     };
     // 10. Use Plotly to plot the data with the layout. 
